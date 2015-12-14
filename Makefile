@@ -5,7 +5,7 @@ ROOTCFLAGS := $(shell root-config --cflags)
 ROOTLIBS := $(shell root-config --libs)
 ROOTGLIBS := $(shell root-config --glibs)
 
-TARGETS = print_tree 
+TARGETS = print_tree hchain
 
 # Suffix
 .SUFFIXES: .o .cc
@@ -13,6 +13,9 @@ TARGETS = print_tree
 	$(CC) $(ROOTCFLAGS) -fPIC -c $< -o $@
 
 all: $(TARGETS)
+
+hchain: src/hchain.o
+	$(CC) -Wall -O2 $(ROOTCFLAGS) $(ROOTLIBS) -o bin/$@ $^
 
 print_tree: src/print_tree.o
 	$(CC) -Wall -O2 $(ROOTCFLAGS) $(ROOTLIBS) -o bin/$@ $^

@@ -8,6 +8,19 @@ Run `make` here to build. Binary file will created in `bin`. Add this `bin` dire
 Run `make clean` will remove all the binary files.
 
 ##Programs
+###hchain
+Make TChain of TTree in multiple ROOT files.
+
+```
+./hchain treename out.root in1.root in2.root...
+```
+
+If you have TTree named "tree" in ROOT files with name of input*.root and your output name is output.root, you will run like this:
+
+```
+./hchain tree output.root input*.root
+```
+
 ###print_tree
 Just print the branches of TTree in the ROOT file.
 
