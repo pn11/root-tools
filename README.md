@@ -9,7 +9,7 @@ Run `make clean` will remove all the binary files.
 
 ##Programs
 ###hchain
-Make TChain of TTree in multiple ROOT files.
+Make TChain of TTree in multiple ROOT files just like `hadd`.
 
 ```
 ./hchain treename out.root in1.root in2.root...
@@ -20,6 +20,14 @@ If you have TTree named "tree" in ROOT files with name of input*.root and your o
 ```
 ./hchain tree output.root input*.root
 ```
+
+If option `-f` applied, `output.root` will be overwritten.
+
+```
+./hchain -f tree output.root input*.root
+```
+
+Input file names shoud be specified with absolute path so that output file can be used in any directory.
 
 ###print_tree
 Just print the branches of TTree in the ROOT file.
