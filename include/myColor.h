@@ -3,17 +3,17 @@
 
 int myColor(int icolor){
   const int ncolor = 10;
-  if (icolor < ncolor){
-    return 0;
+  if (icolor > ncolor){
+    return icolor;
   }
   
   int myColor[ncolor] = {
-    0, // 0
-    1, // 1
+    1, // 0 for black
+    2, // 1 for red
+    3, // 2 for green 
+    
   };
   
-
-
   return myColor[icolor];
 }
 
