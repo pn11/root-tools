@@ -38,3 +38,15 @@ Just print the branches of TTree in the ROOT file.
 
 ###test_myColor
 Check program for `myColor.h`. Under developping.
+
+##Headers
+Headers are located in `include` directory.
+###myColor.h
+Define custom color numbering because ROOT's default numbering sucks (How can I see number 5 (yellow)? How can I distinguish number 3 and 8?). Numbering was set Gnuplot-like.  
+`int myColor(int icolor)` returns Gnuplot-like-ordered number (up to seven at present).
+
+####Reference
+- [Gnuplot Examples](http://www2.yukawa.kyoto-u.ac.jp/~akira.ohnishi/Lib/gnuplot.html)
+	- Color numbering in Gnuplot.
+- [ROOT: TColor Class Reference](https://root.cern.ch/doc/master/classTColor.html)
+	- Color in ROOT.

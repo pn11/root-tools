@@ -45,7 +45,6 @@ int main(int argc, char* argv[]){
       yup  = y1 + hs*(Double_t(j)+0.9);
       color = 10*j + i;
       box->SetFillStyle(1001);
-      cout << color << " " << myColor(color) << endl;
       box->SetFillColor(myColor(color));
       box->DrawBox(xlow, ylow, xup, yup);
       box->SetFillStyle(0);
@@ -55,13 +54,7 @@ int main(int argc, char* argv[]){
       else            text->SetTextColor(1);
       text->DrawText(0.5*(xlow+xup), 0.5*(ylow+yup), Form("%d",color));
     }
-
-  }
-  //  TText *text = new TText(.5, .5, "Hello world");
-  //  text->SetTextColor();
-  //  text->SetTextSize();
-  //  text->Draw();
-  
+  }  
   ctest->Update();
   app->Run();
 }
