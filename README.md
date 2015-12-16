@@ -5,7 +5,7 @@ Tools using ROOT libraries.
 Run `make` here to build. Binary file will created in `bin`. Add this `bin` directory in your `$PATH`.
 
 ###How to uninstall
-Run `make clean` will remove all the binary files.
+Run `make uninstall` will remove all binary files, object files and *~ files.  `make clean` will remove all objects and  *~ files, without removing binaries.
 
 ##Programs
 ###hchain
@@ -36,3 +36,5 @@ Just print the branches of TTree in the ROOT file.
 ./print_tree example.root
 ```
 
+###test_myColor
+Check program for `myColor.h`. Under developping.
