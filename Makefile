@@ -7,7 +7,7 @@ ROOTGLIBS := $(shell root-config --glibs)
 
 INCLUDE := -Iinclude
 
-TARGETS = print_tree hchain test_myColor
+TARGETS = print_tree hchain test_myColor canvas2pdf
 
 # Suffix
 .SUFFIXES: .o .cc
@@ -20,6 +20,9 @@ hchain: src/hchain.o
 	$(CC) -Wall -O2 $(ROOTCFLAGS) $(ROOTLIBS) -o bin/$@ $^
 
 print_tree: src/print_tree.o
+	$(CC) -Wall -O2 $(ROOTCFLAGS) $(ROOTLIBS) -o bin/$@ $^
+
+canvas2pdf: src/canvas2pdf.o
 	$(CC) -Wall -O2 $(ROOTCFLAGS) $(ROOTLIBS) -o bin/$@ $^
 
 test_myColor: src/test_myColor.o
